@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ASCII"?>
+<architectural_metamodel:ConcreteArchitecturalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architectural_metamodel="http://architectural_metamodel/1.7" aamID="AAM_0001" camID="CAM_0001">
+  <relationship xsi:type="architectural_metamodel:Binary" relationshipID="B5_A3" naryRelationship="//@relationship.2" source="//@concreteComponent.1" target="//@concreteComponent.0">
+    <dependency xsi:type="architectural_metamodel:ConcreteDependency" source="//@concreteComponent.1/@interface.1" target="//@concreteComponent.0/@interface.0" dependencyID="B5_A3_a">
+      <connector connectorID="request" target="//@concreteComponent.0/@port.0" source="//@concreteComponent.1/@port.1"/>
+      <connector connectorID="response" target="//@concreteComponent.1/@port.2" source="//@concreteComponent.0/@port.1"/>
+    </dependency>
+  </relationship>
+  <relationship xsi:type="architectural_metamodel:Binary" relationshipID="B5_C2" naryRelationship="//@relationship.2" source="//@concreteComponent.1" target="//@concreteComponent.2">
+    <dependency xsi:type="architectural_metamodel:ConcreteDependency" source="//@concreteComponent.1/@interface.2" target="//@concreteComponent.2/@interface.0" dependencyID="B5_C2_c">
+      <connector connectorID="request" target="//@concreteComponent.2/@port.0" source="//@concreteComponent.1/@port.3"/>
+    </dependency>
+    <dependency xsi:type="architectural_metamodel:ConcreteDependency" source="//@concreteComponent.2/@interface.1" target="//@concreteComponent.0/@interface.1" dependencyID="C2_B5_b">
+      <connector connectorID="request" target="//@concreteComponent.1/@port.0" source="//@concreteComponent.2/@port.1"/>
+    </dependency>
+  </relationship>
+  <relationship xsi:type="architectural_metamodel:Nary" relationshipID="A3_B5_C2" bRelationship="//@relationship.0 //@relationship.1"/>
+  <concreteComponent componentID="A3" bTarget="//@relationship.0">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="a" dTarget="//@relationship.0/@dependency.0"/>
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="d" dTarget="//@relationship.1/@dependency.1"/>
+    <port xsi:type="architectural_metamodel:InputPort" portID="a.method1" cTarget="//@relationship.0/@dependency.0/@connector.0"/>
+    <port xsi:type="architectural_metamodel:OutputPort" portID="a.method1Response" cSource="//@relationship.0/@dependency.0/@connector.1"/>
+    <port xsi:type="architectural_metamodel:InputPort" portID="d.method1"/>
+  </concreteComponent>
+  <concreteComponent componentID="B5" bSource="//@relationship.0 //@relationship.1">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="b"/>
+    <interface xsi:type="architectural_metamodel:Required" interfaceID="a" dSource="//@relationship.0/@dependency.0"/>
+    <interface xsi:type="architectural_metamodel:Required" interfaceID="c" dSource="//@relationship.1/@dependency.0"/>
+    <port xsi:type="architectural_metamodel:InputPort" portID="b.method1" cTarget="//@relationship.1/@dependency.1/@connector.0"/>
+    <port xsi:type="architectural_metamodel:OutputPort" portID="a.method1" cSource="//@relationship.0/@dependency.0/@connector.0"/>
+    <port xsi:type="architectural_metamodel:InputPort" portID="a.method1Response" cTarget="//@relationship.0/@dependency.0/@connector.1"/>
+    <port xsi:type="architectural_metamodel:OutputPort" portID="c.method1" cSource="//@relationship.1/@dependency.0/@connector.0"/>
+  </concreteComponent>
+  <concreteComponent componentID="C2" bTarget="//@relationship.1">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="c" dTarget="//@relationship.1/@dependency.0"/>
+    <interface xsi:type="architectural_metamodel:Required" interfaceID="b" dSource="//@relationship.1/@dependency.1"/>
+    <port xsi:type="architectural_metamodel:InputPort" portID="c.method1" cTarget="//@relationship.1/@dependency.0/@connector.0"/>
+    <port xsi:type="architectural_metamodel:OutputPort" portID="b.method1" cSource="//@relationship.1/@dependency.1/@connector.0"/>
+  </concreteComponent>
+  <aam href="example-aam.xmi#/"/>
+</architectural_metamodel:ConcreteArchitecturalModel>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ASCII"?>
+<architectural_metamodel:ConcreteArchitecturalModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architectural_metamodel="http://architectural_metamodel/1.8" camID="new CAM" aamID="AAM_example3">
+  <concreteComponent componentID="http://acg.ual.es/wookie/widgets/map08" bTarget="//@relationship.0">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="manageMap"/>
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="manageHistogram"/>
+    <port xsi:type="architectural_metamodel:InputPort" portID="getMapLayers"/>
+    <port xsi:type="architectural_metamodel:OutputPort" portID="getMapLayersResponse"/>
+    <port xsi:type="architectural_metamodel:InputPort" portID="setHistogramLayers"/>
+  </concreteComponent>
+  <concreteComponent componentID="http://acg.ual.es/wookie/widgets/header08">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="manageUser"/>
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="manageSession"/>
+    <interface xsi:type="architectural_metamodel:Required" interfaceID="weatherInfo"/>
+    <port xsi:type="architectural_metamodel:InputPort" portID="getUserInfo"/>
+    <port xsi:type="architectural_metamodel:OutputPort" portID="getUserInfoResponse"/>
+    <port xsi:type="architectural_metamodel:InputPort" portID="doLogoutApp"/>
+    <port xsi:type="architectural_metamodel:OutputPort" portID="getWeatherInfo"/>
+    <port xsi:type="architectural_metamodel:InputPort" portID="getWeatherInfoResponse"/>
+  </concreteComponent>
+  <concreteComponent componentID="http://acg.ual.es/wookie/widgets/histogram09" bSource="//@relationship.0">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="manageHistogram"/>
+    <interface xsi:type="architectural_metamodel:Required" interfaceID="manageMap"/>
+    <port xsi:type="architectural_metamodel:InputPort" portID="setHistogramLayers"/>
+    <port xsi:type="architectural_metamodel:InputPort" portID="getHistogramLayers"/>
+    <port xsi:type="architectural_metamodel:OutputPort" portID="getHistogramLayersResponse"/>
+    <port xsi:type="architectural_metamodel:OutputPort" portID="getMapLayers"/>
+    <port xsi:type="architectural_metamodel:InputPort" portID="getMapLayersResponse"/>
+  </concreteComponent>
+  <relationship xsi:type="architectural_metamodel:Binary" relationshipID="B1" type="dependence" source="//@concreteComponent.2" target="//@concreteComponent.0">
+    <dependency xsi:type="architectural_metamodel:ConcreteDependency"/>
+  </relationship>
+</architectural_metamodel:ConcreteArchitecturalModel>

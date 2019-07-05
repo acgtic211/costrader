@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ASCII"?>
+<architectural_metamodel:AbstractArchitecturalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architectural_metamodel="http://architectural_metamodel/2.0" aamID="amm">
+  <abstractComponent componentID="c1" rSource="//@relationship.0" rTarget="//@relationship.1">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="rrrr" dTarget="//@relationship.1/@dependency.0"/>
+  </abstractComponent>
+  <abstractComponent componentID="ccc2" rSource="//@relationship.1" rTarget="//@relationship.0">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="ffff1" dTarget="//@relationship.0/@dependency.0"/>
+    <interface xsi:type="architectural_metamodel:Required" interfaceID="werwewre" dSource="//@relationship.0/@dependency.0 //@relationship.1/@dependency.0"/>
+  </abstractComponent>
+  <abstractComponent componentID="c3" componentName="">
+    <interface xsi:type="architectural_metamodel:Required" interfaceID="dfsd1"/>
+    <interface xsi:type="architectural_metamodel:Required" interfaceID="dfdfddf2"/>
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="sdffsd"/>
+  </abstractComponent>
+  <relationship relationshipID="sadasdsa" source="//@abstractComponent.0" target="//@abstractComponent.1">
+    <dependency source="//@abstractComponent.1/@interface.1" target="//@abstractComponent.1/@interface.0" dependencyID="dep"/>
+  </relationship>
+  <relationship relationshipID="dsfsdfsdf" source="//@abstractComponent.1" target="//@abstractComponent.0">
+    <dependency source="//@abstractComponent.1/@interface.1" target="//@abstractComponent.0/@interface.0" dependencyID="dfsfsdf"/>
+  </relationship>
+</architectural_metamodel:AbstractArchitecturalModel>

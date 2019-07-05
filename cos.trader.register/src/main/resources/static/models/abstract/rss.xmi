@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<acmm:AbstractComponentSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:acmm="http://acg.ual.es/definitions/abstractComponent/1.3.2" xsi:schemaLocation="http://acg.ual.es/definitions/abstractComponent/1.3.2 ../model/acmm.ecore" componentID="rss" componentDescription="RSS" componentName="rss">
+  <functional>
+    <providedInterfaces>
+      <interface interfaceID="manageRSS">
+        <interfaceSpecification uri="http://acg.ual.es/ac/rss/manageRSS.wsdl">
+          <portType name="manageRSS">
+            <operation name="changeRSSFeed">
+              <input name="changeRSSFeed" type="trader:changeRSSFeedInput">
+                <element name="rssFeed" type="trader:rssFeed" minOccurs="1" maxOccurs="1"/>
+              </input>
+            </operation>
+          </portType>
+        </interfaceSpecification>
+      </interface>
+    </providedInterfaces>
+  </functional>
+</acmm:AbstractComponentSpecification>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ASCII"?>
+<architectural_metamodel:AbstractArchitecturalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architectural_metamodel="http://architectural_metamodel/1.8" aamID="AAM_example7">
+  <abstractComponent componentID="map" bTarget="//@relationship.0 //@relationship.1">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="manageMap" dTarget="//@relationship.0/@dependency.0 //@relationship.1/@dependency.0"/>
+  </abstractComponent>
+  <abstractComponent componentID="histogram" bSource="//@relationship.0">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="manageHistogram"/>
+    <interface xsi:type="architectural_metamodel:Required" interfaceID="manageMap" dSource="//@relationship.0/@dependency.0"/>
+  </abstractComponent>
+  <abstractComponent componentID="legend" bSource="//@relationship.1">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="manageLegend"/>
+    <interface xsi:type="architectural_metamodel:Required" interfaceID="manageMap" dSource="//@relationship.1/@dependency.0"/>
+  </abstractComponent>
+  <abstractComponent componentID="rss-req">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="manageRSS"/>
+    <interface xsi:type="architectural_metamodel:Required" interfaceID="exchangeNews"/>
+  </abstractComponent>
+  <abstractComponent componentID="header" bTarget="//@relationship.2 //@relationship.3">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="manageUser" dTarget="//@relationship.2/@dependency.0 //@relationship.3/@dependency.0"/>
+  </abstractComponent>
+  <abstractComponent componentID="twitter-less2" componentName="" bSource="//@relationship.2">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="manageTwitter"/>
+    <interface xsi:type="architectural_metamodel:Required" interfaceID="manageUser" dSource="//@relationship.2/@dependency.0"/>
+  </abstractComponent>
+  <abstractComponent componentID="cloudStorage" componentName="" bSource="//@relationship.3">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="manageImage"/>
+    <interface xsi:type="architectural_metamodel:Required" interfaceID="manageUser" dSource="//@relationship.3/@dependency.0"/>
+  </abstractComponent>
+  <relationship xsi:type="architectural_metamodel:Binary" relationshipID="B1" type="dependence" source="//@abstractComponent.1" target="//@abstractComponent.0">
+    <dependency source="//@abstractComponent.1/@interface.1" target="//@abstractComponent.0/@interface.0" dependencyID="B1_D1"/>
+  </relationship>
+  <relationship xsi:type="architectural_metamodel:Binary" relationshipID="B2" type="dependence" source="//@abstractComponent.2" target="//@abstractComponent.0">
+    <dependency source="//@abstractComponent.2/@interface.1" target="//@abstractComponent.0/@interface.0" dependencyID="B2_D1"/>
+  </relationship>
+  <relationship xsi:type="architectural_metamodel:Binary" relationshipID="B3" source="//@abstractComponent.5" target="//@abstractComponent.4">
+    <dependency source="//@abstractComponent.5/@interface.1" target="//@abstractComponent.4/@interface.0" dependencyID="B3_D1"/>
+  </relationship>
+  <relationship xsi:type="architectural_metamodel:Binary" relationshipID="B4" source="//@abstractComponent.6" target="//@abstractComponent.4">
+    <dependency source="//@abstractComponent.6/@interface.1" target="//@abstractComponent.4/@interface.0" dependencyID="B4_D1"/>
+  </relationship>
+</architectural_metamodel:AbstractArchitecturalModel>

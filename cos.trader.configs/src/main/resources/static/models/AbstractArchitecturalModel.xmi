@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<architectural_metamodel:AbstractArchitecturalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architectural_metamodel="http://architectural_metamodel/2.0" aamID="aam">
+  <abstractComponent componentID="a1" componentType="normal">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="sdfsdf"/>
+  </abstractComponent>
+  <abstractComponent xsi:type="architectural_metamodel:ConcreteComponent"/>
+</architectural_metamodel:AbstractArchitecturalModel>

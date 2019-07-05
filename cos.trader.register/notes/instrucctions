@@ -1,0 +1,8 @@
+
+Services are available at:
+http://localhost:8080/services
+
+RegisterWS
+Endpoint address: http://localhost:8080/services/register
+
+...

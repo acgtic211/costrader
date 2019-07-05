@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<architectural_metamodel:AbstractArchitecturalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architectural_metamodel="http://architectural_metamodel/1.8" aamID="AAM_example1">
+  <abstractComponent componentID="map">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="manageMap"/>
+  </abstractComponent>
+</architectural_metamodel:AbstractArchitecturalModel>

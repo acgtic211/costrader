@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<acmm:AbstractComponentSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:acmm="http://acg.ual.es/definitions/abstractComponent/1.3.2" xsi:schemaLocation="http://acg.ual.es/definitions/abstractComponent/1.3.2 ../model/acmm.ecore" componentID="header" componentDescription="Header" componentName="header">
+  <functional>
+    <providedInterfaces>
+      <interface interfaceID="manageUser">
+        <interfaceSpecification uri="http://acg.ual.es/ac/header/manageUser.wsdl">
+          <portType name="manageUser">
+            <operation name="getUserInfo">
+              <input name="getUserInfo" type="trader:getUserInfoInput"/>
+              <output name="getUserInfoResponse" type="trader:getUserInfoOutput">
+                <element name="userInfo" type="trader:userInfo" minOccurs="1" maxOccurs="1"/>
+              </output>
+            </operation>
+          </portType>
+        </interfaceSpecification>
+      </interface>
+    </providedInterfaces>
+  </functional>
+</acmm:AbstractComponentSpecification>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<architectural_metamodel:AbstractArchitecturalModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architectural_metamodel="http://architectural_metamodel/1.8" aamID="AAM_example2-rss">
+  <abstractComponent componentID="map">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="manageMap"/>
+  </abstractComponent>
+  <abstractComponent componentID="rss-req">
+    <interface xsi:type="architectural_metamodel:Provided" interfaceID="manageRSS"/>
+    <interface xsi:type="architectural_metamodel:Required" interfaceID="exchangeNews"/>
+  </abstractComponent>
+</architectural_metamodel:AbstractArchitecturalModel>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ccmm:ConcreteComponentSpecification
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ccmm="http://acg.ual.es/definitions/concreteComponent/1.3.2"
+    xsi:schemaLocation="http://acg.ual.es/definitions/concreteComponent/1.3.2 ../../model/ccmm.ecore"
+    componentID="http://acg.ual.es/wookie/widgets/audio17"
+    abstractComponentID="audio"
+    componentDescription="audio"
+    componentName="audio17">
+  <functional>
+    <interactionContent
+        filesLanguage="Javascript"
+        filesAddress="./content/interaction/"/>
+    <coreContent
+        filesLanguage="Javascript"
+        filesAddress="./content/core/"/>
+    <controllerInterface
+        filesLanguage="Javascript"
+        filesAddress="./interface/controller/">
+      <providedInterfaces>
+        <interface
+            interfaceID="manageAudio">
+          <interfaceSpecification
+              uri="http://acg.ual.es/cc/audio05/manageAudio.wsdl">
+            <portType
+                name="manageAudio">
+              <operation
+                  name="getAudioStream">
+                <input
+                    name="getAudioStream"
+                    type="trader:getAudioStreamInput"/>
+                <output
+                    name="getAudioStreamResponse"
+                    type="trader:getAudioStreamOutput">
+                  <element
+                      name="--"
+                      type="--"/>
+                </output>
+              </operation>
+            </portType>
+          </interfaceSpecification>
+        </interface>
+      </providedInterfaces>
+    </controllerInterface>
+    <interactionInterface
+        filesLanguage="Javascript"
+        filesAddress="./interface/interaction"/>
+  </functional>
+  <packaging>
+    <location
+        repositoryID="WookieACG"
+        repositoryType="ApacheWookie_1_0_0"
+        repositoryURI="http://acg.ual.es/wookie/"
+        componentURI="http://acg.ual.es/wookie/widgets"/>
+    <implementation
+        programmingLanguage="HTML-CSS-Javascript"/>
+    <version
+        versionID="1.1.0"
+        versionDate="2014-03-20"/>
+  </packaging>
+  <marketing
+      entityID="ACG"
+      entityName="Applied Computing Group"
+      entityDescription="">
+    <contacts>
+      <contact
+          personName="Javi"
+          email="javi.criado@ual.es"
+          phone="+34950214618"
+          address="Ctra. Sacramento s/n"/>
+    </contacts>
+  </marketing>
+</ccmm:ConcreteComponentSpecification>
